@@ -21,4 +21,5 @@ setup(
     #platforms     = '',
     url           = 'https://github.com/area0li/simpletime',
     #packages      =['simpletime'],
+    py_modules    = ['simpletime'],
 )
