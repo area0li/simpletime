@@ -37,7 +37,7 @@ dateFormat = "%Y-%m-%d"
 timeFormat = "%H:%M:%S"
 
 # if argument is none, return current datetime
-def toDatetime(data=datetime.datetime.now()):
+def toDatetime(data=[]):
 	if isinstance(data, datetime.datetime):
 		return data
 	# if argument is a date object, return the beginning time of the date
@@ -69,7 +69,7 @@ def toDatetime(data=datetime.datetime.now()):
 		return res
 
 # if argument is none, return current date
-def toDate(data=datetime.datetime.now().date()):
+def toDate(data=[]):
 	if isinstance(data, datetime.date):
 		return data
 	elif isinstance(data, datetime.datetime):
@@ -103,7 +103,7 @@ def toDate(data=datetime.datetime.now().date()):
 		return res
 
 # if argument is none, return current time
-def toTime(data=datetime.datetime.now().time()):
+def toTime(data=[]):
 	if isinstance(data, datetime.time):
 		return data
 	elif isinstance(data, datetime.datetime):
@@ -133,7 +133,7 @@ def toTime(data=datetime.datetime.now().time()):
 		return res 
 
 # if argument is none, return current timestamp as int
-def toStamp(data=time.time()):
+def toStamp(data=[]):
 	if isinstance(data, float) or isinstance(data, int):
 		res = int(data)
 		return res
@@ -172,7 +172,7 @@ def toStamp(data=time.time()):
 		return res
 
 # if argument is none, return current timestuple
-def toTuple(data=datetime.datetime.now().timetuple()):
+def toTuple(data=[]):
 	if isinstance(data, time.struct_time):
 		return data
 	elif isinstance(data, datetime.datetime):
@@ -207,7 +207,7 @@ def toTuple(data=datetime.datetime.now().timetuple()):
 		return res
 	
 # if argument is none, return current string
-def toString(data=datetime.datetime.now().strftime(strFormat)):
+def toString(data=[]):
 	if isinstance(data, str):
 		return data
 	elif isinstance(data, datetime.datetime):
