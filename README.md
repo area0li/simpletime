@@ -9,3 +9,6 @@ change toStamp() return variable to int
 
 ver 0.0.3
 modify every function default argument to a empty list
+
+ver 0.04
+add the manual file, none functional changes

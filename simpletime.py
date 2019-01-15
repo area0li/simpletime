@@ -163,6 +163,7 @@ def toStamp(data=[]):
 		return res
 	elif isinstance(data, str):
 		# str -> datetime -> timetuple -> timestamp
+		# if string lost date or time!!!
 		tmpDatetime = datetime.datetime.strptime(data, strFormat)
 		tmpTuple = tmpDatetime.timetuple()
 		res = int(time.mktime(tmpTuple))

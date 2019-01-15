@@ -1,0 +1,28 @@
+simpletime
+A module for converting dates and times. 
+Supported objects include datetime.datetime, datetime.date, datetime.time, timestamp(float/int), time.time.struct_time, string(%Y-%m-%d %H:%M:%S)
+
+# if date argument is lost, use the current date instead
+# if time argument is lost, use 00:00:00 instead
+# if date and time are lost, use now instead
+
+Function list:
+1: toDatetime
+2: toDate
+3: toTime #always return int object
+4: toStamp
+5: toTuple
+6: toString
+
+If do not provide a object to conver, the function return current time
+>>> import simpletime as st
+>>> st.toDatetime()
+datetime.datetime(2019, 1, 15, 22, 29, 8, 185436)
+>>> st.toString()
+'2019-01-15 22:29:13'
+>>> st.toStamp()
+1547562563
+>>> st.toDatetime('2019-01-01 01:02:03')
+datetime.datetime(2019, 1, 1, 1, 2, 3)
+>>> st.toStamp('2019-01-01 01:02:03')
+1546275723
